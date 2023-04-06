@@ -67,10 +67,6 @@ class CTk(tkinter.Tk, CTkAppearanceModeBaseClass, CTkScalingBaseClass):
         # save focus before calling withdraw
         self.focused_widget_before_widthdraw = None
 
-        # set CustomTkinter titlebar icon (Windows only)
-        if sys.platform.startswith("win"):
-            self.after(200, self._windows_set_titlebar_icon)
-
         # set titlebar color (Windows only)
         if sys.platform.startswith("win"):
             self._windows_set_titlebar_color(self._get_appearance_mode())
